@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Editor JavaScript online - www.cubicfactory.com</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de reservaciones para una agencia de viajes">
+    <title>Agencia de Viajes | Sistema de Reservaciones</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="hero" id="inicio">
+        <nav class="navbar">
+            <div class="logo">✈️ Agencia de Viajes</div>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#problema">Problema</a></li>
+                <li><a href="#solucion">Solución</a></li>
+                <li><a href="#reservacion">Reservación</a></li>
+                <li><a href="#usuarios">Usuarios</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <p class="subtitle">SISTEMA DIGITAL DE RESERVACIONES</p>
+            <h1>Elige tu destino y disfruta tu viaje</h1>
+
+            <p>
+                Una herramienta sencilla para ayudarte a seleccionar
+                destino, playa y hotel de acuerdo con tus preferencias.
+            </p>
+
+            <a href="#reservacion" class="btn">Comenzar reservación</a>
+        </div>
+    </header>
+
+
+    <!-- PROBLEMA -->
+    <section class="section" id="problema">
+        <div class="container">
+
+            <p class="section-tag">01 · PROBLEMA</p>
+
+            <h2>¿Cuál es el problema?</h2>
+
+            <p class="section-text">
+                Muchas personas presentan dificultades al momento de
+                organizar un viaje debido a la gran cantidad de opciones
+                disponibles para elegir el destino y hospedaje.
+            </p>
+
+            <p class="section-text">
+                El proceso puede resultar tardado o confuso porque el
+                cliente debe revisar diferentes alternativas antes de
+                tomar una decisión.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <span class="card-icon">🔎</span>
+                    <h3>Muchas opciones</h3>
+                    <p>
+                        Existen diferentes destinos, playas y hoteles
+                        entre los cuales elegir.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">⏱️</span>
+                    <h3>Proceso tardado</h3>
+                    <p>
+                        Revisar varias alternativas puede consumir
+                        tiempo antes de realizar una reservación.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🤔</span>
+                    <h3>Decisión complicada</h3>
+                    <p>
+                        El usuario puede tener dificultades para
+                        seleccionar la opción que más le conviene.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SOLUCIÓN -->
+    <section class="section section-light" id="solucion">
+        <div class="container">
+
+            <p class="section-tag">02 · SOLUCIÓN</p>
+
+            <h2>Una reservación más sencilla</h2>
+
+            <p class="section-text">
+                Se propone desarrollar un sistema digital para una
+                agencia de viajes que ayude al usuario a organizar
+                y seleccionar su viaje mediante un proceso guiado
+                de decisiones.
+            </p>
+
+            <div class="steps">
+
+                <div class="step">
+                    <span>01</span>
+                    <h3>Datos del viajero</h3>
+                    <p>
+                        Ingresa tu nombre, número de personas y noches.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <span>02</span>
+                    <h3>Destino</h3>
+                    <p>
+                        Selecciona entre Cancún y Acapulco.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <span>03</span>
+                    <h3>Playa</h3>
+                    <p>
+                        Elige la playa que deseas visitar.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <span>04</span>
+                    <h3>Hotel</h3>
+                    <p>
+                        Selecciona el hotel de acuerdo con el destino.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- RESERVACIÓN -->
+    <section class="section reservation-section" id="reservacion">
+
+        <div class="container">
+
+            <p class="section-tag">03 · RESERVACIÓN</p>
+
+            <h2>Realiza tu reservación</h2>
+
+            <p class="section-text">
+                Completa los datos y el sistema calculará automáticamente
+                el costo de tu viaje.
+            </p>
+
+            <div class="reservation-layout">
+
+                <!-- FORMULARIO -->
+                <div class="form-container">
+
+                    <form id="reservationForm">
+
+                        <div class="form-group">
+                            <label for="nombre">
+                                Nombre del cliente
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                placeholder="Escribe tu nombre"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="personas">
+                                    Número de personas
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="personas"
+                                    min="1"
+                                    placeholder="Ej. 2"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="noches">
+                                    Número de noches
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="noches"
+                                    min="1"
+                                    placeholder="Ej. 3"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="destino">
+                                Selecciona un destino
+                            </label>
+
+                            <select id="destino" required>
+                                <option value="">
+                                    -- Selecciona un destino --
+                                </option>
+
+                                <option value="cancun">
+                                    Cancún
+                                </option>
+
+                                <option value="acapulco">
+                                    Acapulco
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="playa">
+                                Selecciona una playa
+                            </label>
+
+                            <select id="playa" required disabled>
+
+                                <option value="">
+                                    -- Primero selecciona un destino --
+                                </option>
+
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="hotel">
+                                Selecciona un hotel
+                            </label>
+
+                            <select id="hotel" required disabled>
+
+                                <option value="">
+                                    -- Primero selecciona un destino --
+                                </option>
+
+                            </select>
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-submit"
+                        >
+                            Calcular reservación
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- RESUMEN -->
+                <div
+                    class="result-container"
+                    id="resultado"
+                >
+
+                    <div class="result-placeholder">
+
+                        <span class="result-icon">🌴</span>
+
+                        <h3>Tu reservación aparecerá aquí</h3>
+
+                        <p>
+                            Completa el formulario para conocer
+                            el costo de tu viaje.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- USUARIOS -->
+    <section class="section section-light" id="usuarios">
+
+        <div class="container">
+
+            <p class="section-tag">04 · USUARIOS</p>
+
+            <h2>¿Quiénes pueden utilizarlo?</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <span class="card-icon">🧳</span>
+
+                    <h3>Viajeros</h3>
+
+                    <p>
+                        Personas que desean organizar y reservar
+                        sus vacaciones.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <span class="card-icon">🏢</span>
+
+                    <h3>Agencia de viajes</h3>
+
+                    <p>
+                        Personal que necesita facilitar el proceso
+                        de selección y reservación.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <span class="card-icon">💻</span>
+
+                    <h3>Administradores</h3>
+
+                    <p>
+                        Personas encargadas de administrar el
+                        funcionamiento del sistema.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="benefits">
+
+                <h3>Beneficios esperados</h3>
+
+                <ul>
+                    <li>✓ Mejor organización de reservaciones.</li>
+                    <li>✓ Mayor comodidad para el usuario.</li>
+                    <li>✓ Reducción de errores durante el registro.</li>
+                    <li>✓ Mayor facilidad para tomar decisiones.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CRÉDITOS -->
+    <section class="credits">
+
+        <div class="container">
+
+            <p class="section-tag">05 · CRÉDITOS</p>
+
+            <h2>Proyecto Final</h2>
+
+            <p>
+                Innovación y Tecnologías de la Información
+            </p>
+
+            <div class="credits-info">
+
+                <p>
+                    <strong>Alumno:</strong>
+   Evelin Itzel Rivera Rincon 
+                </p>
+
+                <p>
+                    <strong>Grupo:</strong>
+5SLETURIMA
+                </p>
+
+                <p>
+                    <strong>Docente:</strong>
+Angel Uriel Morales 
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Agencia de Viajes · Proyecto de Innovación
+            y Tecnologías de la Información
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>
